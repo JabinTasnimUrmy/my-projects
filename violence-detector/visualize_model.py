@@ -2,11 +2,9 @@ import torch
 from torchsummary import summary
 from models.violence_model import ViolenceClassifier
 
-# --- Configuration ---
 DEVICE = torch.device("cpu")
 
-# --- Model Loading ---
-# Instantiate our full model and move it to the CPU for inspection
+# Model Loading 
 model = ViolenceClassifier(dropout_p=0.5)
 model = model.to(DEVICE)
 
@@ -18,11 +16,10 @@ print("custom fine-tuned classifier attached as the final 'fc' layer.\n")
 print("The model expects an input of shape (Batch, Channels, Time, Height, Width).")
 print("For this summary, we will use a sample input shape of (1, 3, 16, 112, 112).\n")
 
-# --- Generate and Print the Summary ---
-# The input shape (Channels, Time, Height, Width) for the summary tool
+# Generate and Print the Summary 
 input_shape = (3, 16, 112, 112)
 
-# FIX: Explicitly tell torchsummary to run on the CPU to match the model's device.
+
 summary(model.model, input_shape, device=DEVICE.type)
 
 print("\n" + "="*80)
