@@ -1,0 +1,97 @@
+================================================================================
+================= Full PyTorch Model Structure (model.__str__) =================
+================================================================================
+LipReadModel(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn3): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv4): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (cnn_fc): Linear(in_features=4608, out_features=512, bias=True)
+  (cnn_dropout): Dropout(p=0.3, inplace=False)
+  (lstm): LSTM(512, 256, num_layers=2, batch_first=True, dropout=0.3, bidirectional=True)
+  (fc_classifier): Linear(in_features=512, out_features=37, bias=True)
+)
+================================================================================
+
+================================================================================
+===================== CNN Backbone Summary (torchsummary) ======================
+================================================================================
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 32, 96, 96]             288
+       BatchNorm2d-2           [-1, 32, 96, 96]              64
+              ReLU-3           [-1, 32, 96, 96]               0
+         MaxPool2d-4           [-1, 32, 48, 48]               0
+            Conv2d-5           [-1, 64, 48, 48]          18,432
+       BatchNorm2d-6           [-1, 64, 48, 48]             128
+              ReLU-7           [-1, 64, 48, 48]               0
+         MaxPool2d-8           [-1, 64, 24, 24]               0
+            Conv2d-9           [-1, 96, 24, 24]          55,296
+      BatchNorm2d-10           [-1, 96, 24, 24]             192
+             ReLU-11           [-1, 96, 24, 24]               0
+        MaxPool2d-12           [-1, 96, 12, 12]               0
+           Conv2d-13          [-1, 128, 12, 12]         110,592
+      BatchNorm2d-14          [-1, 128, 12, 12]             256
+             ReLU-15          [-1, 128, 12, 12]               0
+        MaxPool2d-16            [-1, 128, 6, 6]               0
+          Flatten-17                 [-1, 4608]               0
+           Linear-18                  [-1, 512]       2,359,808
+             ReLU-19                  [-1, 512]               0
+          Dropout-20                  [-1, 512]               0
+================================================================
+Total params: 2,545,056
+Trainable params: 2,545,056
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.04
+Forward/backward pass size (MB): 12.84
+Params size (MB): 9.71
+Estimated Total Size (MB): 22.59
+----------------------------------------------------------------
+
+================================================================================
+======================= Full Model Data Flow Description =======================
+================================================================================
+
+1. Input Video Sequence:
+   - Shape: (Batch, Time=75, Channels=1, Height=96, Width=96)
+   - The input is a batch of video clips, each with 75 grayscale frames.
+
+2. CNN Backbone (Spatial Feature Extraction):
+   - The video sequence is reshaped to (Batch * Time, Channels, Height, Width) to process each frame.
+   - Each frame is passed through the CNN backbone summarized above.
+   - Output of CNN per frame: A feature vector of size 512.
+
+3. Sequence Reshaping for LSTM:
+   - The frame-wise feature vectors are re-assembled into sequences.
+   - Shape changes from (Batch * Time, 512) back to (Batch, Time=75, 512).
+
+4. Bidirectional LSTM (Temporal Modeling):
+   - Type: <class 'torch.nn.modules.rnn.LSTM'>
+   - Takes the sequence of 75 feature vectors as input.
+   - Hidden Size: 256 (per direction)
+   - Num Layers: 2
+   - Bidirectional: True (processes sequence forwards and backwards)
+   - Output Shape: (Batch, Time=75, Features=512)
+
+5. Classifier (Frame-wise Prediction):
+   - Type: <class 'torch.nn.modules.linear.Linear'>
+   - A fully connected layer that maps the LSTM output to class logits for each time step.
+   - Input Features: 512
+   - Output Features (Num Classes): 37
+   - Output Shape: (Batch, Time=75, Classes=37)
+
+6. Final Output Transformation for CTC:
+   - A LogSoftmax activation is applied to the logits.
+   - The tensor dimensions are permuted from (Batch, Time, Classes) to (Time, Batch, Classes).
+   - Final Output Shape for CTC Loss/Decoding: (75, Batch, 37)
+================================================================================
