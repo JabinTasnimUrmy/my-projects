@@ -54,10 +54,9 @@ lip_reading_project/
 ├── preprocess_grid.py            # Utility to convert raw GRID videos to processed numpy arrays.
 ├── grid_manifest.csv             # Maps preprocessed video files to their text transcripts.
 ├── training_log_grid.txt         # Detailed log of the training process, losses, and metrics.
-└── shape_predictor_68_face_landmarks.dat # Dlib's pre-trained facial landmark model.
 │
 ├── README.md                     # Add comprehensive project README with full workflow and architecture
-└── visualize_model.py            # Generating multi-class confusion matrix
+└── visualize_model.py            # To generate and save a detailed, layer-by-layer summary of the custom PyTorch model's architecture.
 ```
 ---
 
@@ -278,6 +277,7 @@ The overall data flow through the model's major stages is as follows:
         │   2. CTC Decoder (during Inference)                          │
         └──────────────────────────────────────────────────────────────┘
 ```
+[see more ..](./model_architecture.txt)
 
 ## 📊 Performance & Evaluation
 
