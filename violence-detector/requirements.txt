@@ -1,0 +1,36 @@
+# ==============================================================================
+#  Requirements for the Real-Time Violence Detection Project
+# ==============================================================================
+#
+# This file lists the Python packages required to run this project.
+# It is highly recommended to install these packages within a virtual environment.
+#
+# --- PYTHON VERSION ---
+# This project was developed and tested using Python 3.10.
+# It is recommended to use the same version to ensure full compatibility.
+#
+# --- IMPORTANT INSTALLATION NOTE ---
+# For GPU support, it is best to install PyTorch first by following the official
+# instructions for your specific CUDA version from the PyTorch website:
+# https://pytorch.org/get-started/locally/
+#
+# After installing PyTorch, you can install the rest of the packages using:
+# pip install -r requirements.txt
+# ------------------------------------------------------------------------------
+
+# General utilities and data handling 
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision and Numerical Operations 
+numpy==1.26.4
+opencv-python==4.9.0.80
+Pillow>=9.0.0
+
+# Libraries used by evaluate.py to generate performance reports and visualizations.
+scikit-learn>=1.2.0
+seaborn>=0.12.0
+matplotlib>=3.7.0
+
+# Used for creating progress bars in the command line for a better user experience.
+tqdm>=4.60.0
