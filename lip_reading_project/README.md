@@ -60,7 +60,7 @@ lip_reading_project/
 ```
 ---
 
-## ⚙️ End-to-End Workflow From Scratch
+## ⚙️ End-to-End Workflow 
 This guide provides every command needed to replicate this project, from setting up the environment to running the live demo.
 
 ---
