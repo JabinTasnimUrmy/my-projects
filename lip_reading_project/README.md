@@ -139,16 +139,19 @@ Press 'q' while the window is active to quit.
 ## 🧠 Model Architecture 
 The system's intelligence lies in its custom-defined, two-stage architecture that processes both spatial and temporal information.
 1. CNN Backbone (Spatial Feature Extractor):
-Purpose: To analyze each individual frame of the video and extract relevant visual features from the mouth region.
-Structure: A stack of four Conv2d layers, each followed by BatchNorm2d, a ReLU activation, and MaxPool2d. This progressively downsamples the image while building a rich feature representation of shapes, edges, and textures corresponding to lip formations (visemes).
-Output: A fixed-size feature vector for each frame.
+
+    * Purpose: To analyze each individual frame of the video and extract relevant visual features from the mouth region.
+    
+    * Structure: A stack of four Conv2d layers, each followed by BatchNorm2d, a ReLU activation, and MaxPool2d. This progressively downsamples the image while building a rich feature representation of shapes, edges, and textures corresponding to lip formations (visemes).
+    * Output: A fixed-size feature vector for each frame.
+
 2. Bidirectional LSTM (Temporal Modeler):
-Purpose: To understand the sequence of lip movements over time. Lip-reading is not about static images, but about the dynamics of motion.
-Structure: A 2-layer bidirectional LSTM takes the sequence of feature vectors from the CNN. By processing the sequence both forwards and backwards, it captures context from past and future frames to make a more informed prediction for each moment in time.
-Output: A sequence of context-aware feature vectors.
+    * Purpose: To understand the sequence of lip movements over time. Lip-reading is not about static images, but about the dynamics of motion.
+    * Structure: A 2-layer bidirectional LSTM takes the sequence of feature vectors from the CNN. By processing the sequence both forwards and backwards, it captures context from past and future frames to make a more informed prediction for each moment in time.
+    * Output: A sequence of context-aware feature vectors.
 3. CTC Loss & Decoder:
-Challenge: The exact timing of when a character is spoken is unknown.
-Solution: A final linear classifier outputs a probability distribution over all characters (plus a special 'blank' token) for each time step. The CTC Loss function then intelligently calculates the loss by summing the probabilities of all possible alignments between the model's output and the true text, elegantly solving the alignment problem. During inference, a Greedy CTC Decoder translates the frame-by-frame predictions back into human-readable text.
+    * Challenge: The exact timing of when a character is spoken is unknown.
+    * Solution: A final linear classifier outputs a probability distribution over all characters (plus a special 'blank' token) for each time step. The CTC Loss function then intelligently calculates the loss by summing the probabilities of all possible alignments between the model's output and the true text, elegantly solving the alignment problem. During inference, a Greedy CTC Decoder translates the frame-by-frame predictions back into human-readable text.
 
 The overall data flow through the model's major stages is as follows:
 
