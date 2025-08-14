@@ -1,0 +1,14 @@
+torch
+torchvision
+torchaudio
+opencv-python
+numpy
+matplotlib
+dlib
+scikit-learn
+pandas
+requests
+jiwer
+tqdm
+seaborn
+torchsummary
