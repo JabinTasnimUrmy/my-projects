@@ -1,0 +1,1148 @@
+2025-04-18 16:28:11 - --- Lip Reading Model Training Started ---
+2025-04-18 16:28:11 - Timestamp: 2025-04-18 16:28:11
+2025-04-18 16:28:11 - Using Device: cuda
+2025-04-18 16:28:11 - Configuration: Batch=8, LR=0.0001, Epochs=50, Patience=10
+2025-04-18 16:28:11 - Model Params: CNN_Out=512, LSTM_Hidden=256, LSTM_Layers=2, Dropout=0.3
+2025-04-18 16:28:11 - Manifest: grid_manifest.csv, Model Save Dir: saved_models, Log File: training_log_grid.txt
+2025-04-18 16:28:11 - 
+--- Loading Data ---
+2025-04-18 16:28:12 - Data loaded. Train batches: 3299, Val batches: 413, Test batches: 413
+2025-04-18 16:28:12 - 
+--- Initializing Model ---
+2025-04-18 16:28:12 - Model initialized. Trainable Parameters: 5,717,957
+2025-04-18 16:28:12 - CTC Loss initialized with blank index: 0
+2025-04-18 16:28:15 - Optimizer: AdamW, Learning Rate: 0.0001
+2025-04-18 16:28:15 - Scheduler: ReduceLROnPlateau (monitors Val CER, factor=0.5, patience=5)
+2025-04-18 16:28:15 - 
+--- Starting Training Loop ---
+2025-04-18 16:39:10 - 
+--- Validation Examples ---
+2025-04-18 16:39:10 -  Target: 'bin white at d seven soon'
+2025-04-18 16:39:10 -  Pred:   'binwhiteattiesoon'
+2025-04-18 16:39:10 - --------------------
+2025-04-18 16:39:10 -  Target: 'place red at n six again'
+2025-04-18 16:39:10 -  Pred:   'placgreatsixagain'
+2025-04-18 16:39:10 - --------------------
+2025-04-18 16:39:10 -  Target: 'place red by i eight soon'
+2025-04-18 16:39:10 -  Pred:   'placgrebyiesoon'
+2025-04-18 16:39:10 - --------------------
+2025-04-18 16:39:10 -  Target: 'set blue at m eight please'
+2025-04-18 16:39:10 -  Pred:   'leyblueitieagaie'
+2025-04-18 16:39:10 - --------------------
+2025-04-18 16:39:10 -  Target: 'lay white by y five again'
+2025-04-18 16:39:10 -  Pred:   'satwhiteithfieplgaie'
+2025-04-18 16:39:10 - --------------------
+2025-04-18 16:39:10 - Epoch 1/50 Summary | Duration: 655.89s
+2025-04-18 16:39:10 -   Train Loss: 0.9088
+2025-04-18 16:39:10 -   Val Loss:   0.2514
+2025-04-18 16:39:10 -   Val CER:    0.5396
+2025-04-18 16:39:11 - ----> Validation CER improved to 0.5396! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 16:49:48 - 
+--- Validation Examples ---
+2025-04-18 16:49:48 -  Target: 'bin white at d seven soon'
+2025-04-18 16:49:48 -  Pred:   'binwhiteitasivesoon'
+2025-04-18 16:49:48 - --------------------
+2025-04-18 16:49:48 -  Target: 'place red at n six again'
+2025-04-18 16:49:48 -  Pred:   'placreeinsineagain'
+2025-04-18 16:49:48 - --------------------
+2025-04-18 16:49:48 -  Target: 'place red by i eight soon'
+2025-04-18 16:49:48 -  Pred:   'placegreedbypixesoon'
+2025-04-18 16:49:48 - --------------------
+2025-04-18 16:49:48 -  Target: 'set blue at m eight please'
+2025-04-18 16:49:48 -  Pred:   'seyblueinbsiveplease'
+2025-04-18 16:49:48 - --------------------
+2025-04-18 16:49:48 -  Target: 'lay white by y five again'
+2025-04-18 16:49:48 -  Pred:   'laywhitewithbfireagain'
+2025-04-18 16:49:48 - --------------------
+2025-04-18 16:49:48 - Epoch 2/50 Summary | Duration: 636.99s
+2025-04-18 16:49:48 -   Train Loss: 0.0626
+2025-04-18 16:49:48 -   Val Loss:   -0.0917
+2025-04-18 16:49:48 -   Val CER:    0.4223
+2025-04-18 16:49:48 - ----> Validation CER improved to 0.4223! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:00:08 - 
+--- Validation Examples ---
+2025-04-18 17:00:08 -  Target: 'bin white at d seven soon'
+2025-04-18 17:00:08 -  Pred:   'binwhiteatafivesoon'
+2025-04-18 17:00:08 - --------------------
+2025-04-18 17:00:08 -  Target: 'place red at n six again'
+2025-04-18 17:00:08 -  Pred:   'placeredatcsixagain'
+2025-04-18 17:00:08 - --------------------
+2025-04-18 17:00:08 -  Target: 'place red by i eight soon'
+2025-04-18 17:00:08 -  Pred:   'placegreenbybninesoon'
+2025-04-18 17:00:08 - --------------------
+2025-04-18 17:00:08 -  Target: 'set blue at m eight please'
+2025-04-18 17:00:08 -  Pred:   'setblueansineplease'
+2025-04-18 17:00:08 - --------------------
+2025-04-18 17:00:08 -  Target: 'lay white by y five again'
+2025-04-18 17:00:08 -  Pred:   'laywhitewithyfiveagain'
+2025-04-18 17:00:08 - --------------------
+2025-04-18 17:00:08 - Epoch 3/50 Summary | Duration: 620.24s
+2025-04-18 17:00:08 -   Train Loss: -0.1693
+2025-04-18 17:00:08 -   Val Loss:   -0.2569
+2025-04-18 17:00:08 -   Val CER:    0.3727
+2025-04-18 17:00:08 - ----> Validation CER improved to 0.3727! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:10:28 - 
+--- Validation Examples ---
+2025-04-18 17:10:28 -  Target: 'bin white at d seven soon'
+2025-04-18 17:10:28 -  Pred:   'binwhiteatcfevesoon'
+2025-04-18 17:10:28 - --------------------
+2025-04-18 17:10:28 -  Target: 'place red at n six again'
+2025-04-18 17:10:28 -  Pred:   'placeredatcsixagain'
+2025-04-18 17:10:28 - --------------------
+2025-04-18 17:10:28 -  Target: 'place red by i eight soon'
+2025-04-18 17:10:28 -  Pred:   'placereenbynigesoon'
+2025-04-18 17:10:28 - --------------------
+2025-04-18 17:10:28 -  Target: 'set blue at m eight please'
+2025-04-18 17:10:28 -  Pred:   'setblueanmnineplease'
+2025-04-18 17:10:28 - --------------------
+2025-04-18 17:10:28 -  Target: 'lay white by y five again'
+2025-04-18 17:10:28 -  Pred:   'laywhitewithyfiveagain'
+2025-04-18 17:10:28 - --------------------
+2025-04-18 17:10:28 - Epoch 4/50 Summary | Duration: 619.85s
+2025-04-18 17:10:28 -   Train Loss: -0.2953
+2025-04-18 17:10:28 -   Val Loss:   -0.3649
+2025-04-18 17:10:28 -   Val CER:    0.3437
+2025-04-18 17:10:28 - ----> Validation CER improved to 0.3437! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:20:48 - 
+--- Validation Examples ---
+2025-04-18 17:20:48 -  Target: 'bin white at d seven soon'
+2025-04-18 17:20:48 -  Pred:   'binwhiteitsivesoon'
+2025-04-18 17:20:48 - --------------------
+2025-04-18 17:20:48 -  Target: 'place red at n six again'
+2025-04-18 17:20:48 -  Pred:   'placeredatssixagain'
+2025-04-18 17:20:48 - --------------------
+2025-04-18 17:20:48 -  Target: 'place red by i eight soon'
+2025-04-18 17:20:48 -  Pred:   'placeredbyleighsoon'
+2025-04-18 17:20:48 - --------------------
+2025-04-18 17:20:48 -  Target: 'set blue at m eight please'
+2025-04-18 17:20:48 -  Pred:   'setblueatmnigeplease'
+2025-04-18 17:20:48 - --------------------
+2025-04-18 17:20:48 -  Target: 'lay white by y five again'
+2025-04-18 17:20:48 -  Pred:   'laywhitewithffiveagain'
+2025-04-18 17:20:48 - --------------------
+2025-04-18 17:20:48 - Epoch 5/50 Summary | Duration: 620.45s
+2025-04-18 17:20:48 -   Train Loss: -0.3749
+2025-04-18 17:20:48 -   Val Loss:   -0.4277
+2025-04-18 17:20:48 -   Val CER:    0.3244
+2025-04-18 17:20:48 - ----> Validation CER improved to 0.3244! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:31:11 - 
+--- Validation Examples ---
+2025-04-18 17:31:11 -  Target: 'bin white at d seven soon'
+2025-04-18 17:31:11 -  Pred:   'binwhiteinzsevesoon'
+2025-04-18 17:31:11 - --------------------
+2025-04-18 17:31:11 -  Target: 'place red at n six again'
+2025-04-18 17:31:11 -  Pred:   'placeredatdsixagain'
+2025-04-18 17:31:11 - --------------------
+2025-04-18 17:31:11 -  Target: 'place red by i eight soon'
+2025-04-18 17:31:11 -  Pred:   'placeredbynighsoon'
+2025-04-18 17:31:11 - --------------------
+2025-04-18 17:31:11 -  Target: 'set blue at m eight please'
+2025-04-18 17:31:11 -  Pred:   'setblueanpigeplease'
+2025-04-18 17:31:11 - --------------------
+2025-04-18 17:31:11 -  Target: 'lay white by y five again'
+2025-04-18 17:31:11 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 17:31:11 - --------------------
+2025-04-18 17:31:11 - Epoch 6/50 Summary | Duration: 623.07s
+2025-04-18 17:31:11 -   Train Loss: -0.4373
+2025-04-18 17:31:11 -   Val Loss:   -0.4996
+2025-04-18 17:31:11 -   Val CER:    0.3063
+2025-04-18 17:31:11 - ----> Validation CER improved to 0.3063! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:41:28 - 
+--- Validation Examples ---
+2025-04-18 17:41:28 -  Target: 'bin white at d seven soon'
+2025-04-18 17:41:28 -  Pred:   'binwhiteincsevesoon'
+2025-04-18 17:41:28 - --------------------
+2025-04-18 17:41:28 -  Target: 'place red at n six again'
+2025-04-18 17:41:28 -  Pred:   'placeredatdsixagain'
+2025-04-18 17:41:28 - --------------------
+2025-04-18 17:41:28 -  Target: 'place red by i eight soon'
+2025-04-18 17:41:28 -  Pred:   'placeredbyaeightsoon'
+2025-04-18 17:41:28 - --------------------
+2025-04-18 17:41:28 -  Target: 'set blue at m eight please'
+2025-04-18 17:41:28 -  Pred:   'setblueinbtightplease'
+2025-04-18 17:41:28 - --------------------
+2025-04-18 17:41:28 -  Target: 'lay white by y five again'
+2025-04-18 17:41:28 -  Pred:   'laywhiteithyfiveagain'
+2025-04-18 17:41:28 - --------------------
+2025-04-18 17:41:28 - Epoch 7/50 Summary | Duration: 616.40s
+2025-04-18 17:41:28 -   Train Loss: -0.4940
+2025-04-18 17:41:28 -   Val Loss:   -0.5442
+2025-04-18 17:41:28 -   Val CER:    0.2941
+2025-04-18 17:41:28 - ----> Validation CER improved to 0.2941! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 17:51:44 - 
+--- Validation Examples ---
+2025-04-18 17:51:44 -  Target: 'bin white at d seven soon'
+2025-04-18 17:51:44 -  Pred:   'binwhiteinzsevensoon'
+2025-04-18 17:51:44 - --------------------
+2025-04-18 17:51:44 -  Target: 'place red at n six again'
+2025-04-18 17:51:44 -  Pred:   'placeredindsixagain'
+2025-04-18 17:51:44 - --------------------
+2025-04-18 17:51:44 -  Target: 'place red by i eight soon'
+2025-04-18 17:51:44 -  Pred:   'placeredbyleightsoon'
+2025-04-18 17:51:44 - --------------------
+2025-04-18 17:51:44 -  Target: 'set blue at m eight please'
+2025-04-18 17:51:44 -  Pred:   'setblueinmeightplease'
+2025-04-18 17:51:44 - --------------------
+2025-04-18 17:51:44 -  Target: 'lay white by y five again'
+2025-04-18 17:51:44 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 17:51:44 - --------------------
+2025-04-18 17:51:44 - Epoch 8/50 Summary | Duration: 615.80s
+2025-04-18 17:51:44 -   Train Loss: -0.5319
+2025-04-18 17:51:44 -   Val Loss:   -0.5603
+2025-04-18 17:51:44 -   Val CER:    0.2888
+2025-04-18 17:51:44 - ----> Validation CER improved to 0.2888! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 18:01:59 - 
+--- Validation Examples ---
+2025-04-18 18:01:59 -  Target: 'bin white at d seven soon'
+2025-04-18 18:01:59 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 18:01:59 - --------------------
+2025-04-18 18:01:59 -  Target: 'place red at n six again'
+2025-04-18 18:01:59 -  Pred:   'placeredatdsixagain'
+2025-04-18 18:01:59 - --------------------
+2025-04-18 18:01:59 -  Target: 'place red by i eight soon'
+2025-04-18 18:01:59 -  Pred:   'placeredbyyeighsoon'
+2025-04-18 18:01:59 - --------------------
+2025-04-18 18:01:59 -  Target: 'set blue at m eight please'
+2025-04-18 18:01:59 -  Pred:   'setblueanmeighplease'
+2025-04-18 18:01:59 - --------------------
+2025-04-18 18:01:59 -  Target: 'lay white by y five again'
+2025-04-18 18:01:59 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 18:01:59 - --------------------
+2025-04-18 18:01:59 - Epoch 9/50 Summary | Duration: 615.63s
+2025-04-18 18:01:59 -   Train Loss: -0.5574
+2025-04-18 18:01:59 -   Val Loss:   -0.5953
+2025-04-18 18:01:59 -   Val CER:    0.2757
+2025-04-18 18:01:59 - ----> Validation CER improved to 0.2757! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 18:12:15 - 
+--- Validation Examples ---
+2025-04-18 18:12:15 -  Target: 'bin white at d seven soon'
+2025-04-18 18:12:15 -  Pred:   'binwhiteitcsevensoon'
+2025-04-18 18:12:15 - --------------------
+2025-04-18 18:12:15 -  Target: 'place red at n six again'
+2025-04-18 18:12:15 -  Pred:   'placeredindsixagain'
+2025-04-18 18:12:15 - --------------------
+2025-04-18 18:12:15 -  Target: 'place red by i eight soon'
+2025-04-18 18:12:15 -  Pred:   'placeredbyeightsoon'
+2025-04-18 18:12:15 - --------------------
+2025-04-18 18:12:15 -  Target: 'set blue at m eight please'
+2025-04-18 18:12:15 -  Pred:   'setblueateighplease'
+2025-04-18 18:12:15 - --------------------
+2025-04-18 18:12:15 -  Target: 'lay white by y five again'
+2025-04-18 18:12:15 -  Pred:   'laybitebyffiveagain'
+2025-04-18 18:12:15 - --------------------
+2025-04-18 18:12:15 - Epoch 10/50 Summary | Duration: 615.57s
+2025-04-18 18:12:15 -   Train Loss: -0.5829
+2025-04-18 18:12:15 -   Val Loss:   -0.3800
+2025-04-18 18:12:15 -   Val CER:    0.3102
+2025-04-18 18:12:15 - Validation CER did not improve. (1/10)
+2025-04-18 18:22:31 - 
+--- Validation Examples ---
+2025-04-18 18:22:31 -  Target: 'bin white at d seven soon'
+2025-04-18 18:22:31 -  Pred:   'binwhiteinzsevesoon'
+2025-04-18 18:22:31 - --------------------
+2025-04-18 18:22:31 -  Target: 'place red at n six again'
+2025-04-18 18:22:31 -  Pred:   'placereditdsixagain'
+2025-04-18 18:22:31 - --------------------
+2025-04-18 18:22:31 -  Target: 'place red by i eight soon'
+2025-04-18 18:22:31 -  Pred:   'placeredbyieighsoon'
+2025-04-18 18:22:31 - --------------------
+2025-04-18 18:22:31 -  Target: 'set blue at m eight please'
+2025-04-18 18:22:31 -  Pred:   'setblueitmeightplease'
+2025-04-18 18:22:31 - --------------------
+2025-04-18 18:22:31 -  Target: 'lay white by y five again'
+2025-04-18 18:22:31 -  Pred:   'laywhitewithyfiveagain'
+2025-04-18 18:22:31 - --------------------
+2025-04-18 18:22:31 - Epoch 11/50 Summary | Duration: 615.79s
+2025-04-18 18:22:31 -   Train Loss: -0.5668
+2025-04-18 18:22:31 -   Val Loss:   -0.6125
+2025-04-18 18:22:31 -   Val CER:    0.2695
+2025-04-18 18:22:31 - ----> Validation CER improved to 0.2695! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 18:32:46 - 
+--- Validation Examples ---
+2025-04-18 18:32:46 -  Target: 'bin white at d seven soon'
+2025-04-18 18:32:46 -  Pred:   'binwhiteitsevensoon'
+2025-04-18 18:32:46 - --------------------
+2025-04-18 18:32:46 -  Target: 'place red at n six again'
+2025-04-18 18:32:46 -  Pred:   'placeredinxsixagain'
+2025-04-18 18:32:46 - --------------------
+2025-04-18 18:32:46 -  Target: 'place red by i eight soon'
+2025-04-18 18:32:46 -  Pred:   'placeredbyneightsoon'
+2025-04-18 18:32:46 - --------------------
+2025-04-18 18:32:46 -  Target: 'set blue at m eight please'
+2025-04-18 18:32:46 -  Pred:   'setblueanmeightplease'
+2025-04-18 18:32:46 - --------------------
+2025-04-18 18:32:46 -  Target: 'lay white by y five again'
+2025-04-18 18:32:46 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 18:32:46 - --------------------
+2025-04-18 18:32:46 - Epoch 12/50 Summary | Duration: 615.42s
+2025-04-18 18:32:46 -   Train Loss: -0.6062
+2025-04-18 18:32:46 -   Val Loss:   -0.5814
+2025-04-18 18:32:46 -   Val CER:    0.2755
+2025-04-18 18:32:46 - Validation CER did not improve. (1/10)
+2025-04-18 18:43:02 - 
+--- Validation Examples ---
+2025-04-18 18:43:02 -  Target: 'bin white at d seven soon'
+2025-04-18 18:43:02 -  Pred:   'binwhiteincsevesoon'
+2025-04-18 18:43:02 - --------------------
+2025-04-18 18:43:02 -  Target: 'place red at n six again'
+2025-04-18 18:43:02 -  Pred:   'placeredatssixagain'
+2025-04-18 18:43:02 - --------------------
+2025-04-18 18:43:02 -  Target: 'place red by i eight soon'
+2025-04-18 18:43:02 -  Pred:   'placeredbyegxsoon'
+2025-04-18 18:43:02 - --------------------
+2025-04-18 18:43:02 -  Target: 'set blue at m eight please'
+2025-04-18 18:43:02 -  Pred:   'setblueatmeightplease'
+2025-04-18 18:43:02 - --------------------
+2025-04-18 18:43:02 -  Target: 'lay white by y five again'
+2025-04-18 18:43:02 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 18:43:02 - --------------------
+2025-04-18 18:43:02 - Epoch 13/50 Summary | Duration: 615.74s
+2025-04-18 18:43:02 -   Train Loss: -0.5984
+2025-04-18 18:43:02 -   Val Loss:   -0.6239
+2025-04-18 18:43:02 -   Val CER:    0.2652
+2025-04-18 18:43:02 - ----> Validation CER improved to 0.2652! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 18:53:17 - 
+--- Validation Examples ---
+2025-04-18 18:53:17 -  Target: 'bin white at d seven soon'
+2025-04-18 18:53:17 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 18:53:17 - --------------------
+2025-04-18 18:53:17 -  Target: 'place red at n six again'
+2025-04-18 18:53:17 -  Pred:   'placeredanssixagain'
+2025-04-18 18:53:17 - --------------------
+2025-04-18 18:53:17 -  Target: 'place red by i eight soon'
+2025-04-18 18:53:17 -  Pred:   'placeredbyeightsoon'
+2025-04-18 18:53:17 - --------------------
+2025-04-18 18:53:17 -  Target: 'set blue at m eight please'
+2025-04-18 18:53:17 -  Pred:   'setblueinmeightplease'
+2025-04-18 18:53:17 - --------------------
+2025-04-18 18:53:17 -  Target: 'lay white by y five again'
+2025-04-18 18:53:17 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 18:53:17 - --------------------
+2025-04-18 18:53:17 - Epoch 14/50 Summary | Duration: 615.49s
+2025-04-18 18:53:17 -   Train Loss: -0.6296
+2025-04-18 18:53:17 -   Val Loss:   -0.6390
+2025-04-18 18:53:17 -   Val CER:    0.2615
+2025-04-18 18:53:18 - ----> Validation CER improved to 0.2615! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 19:03:33 - 
+--- Validation Examples ---
+2025-04-18 19:03:33 -  Target: 'bin white at d seven soon'
+2025-04-18 19:03:33 -  Pred:   'binwhiteitdsevensoon'
+2025-04-18 19:03:33 - --------------------
+2025-04-18 19:03:33 -  Target: 'place red at n six again'
+2025-04-18 19:03:33 -  Pred:   'placeredanssixagain'
+2025-04-18 19:03:33 - --------------------
+2025-04-18 19:03:33 -  Target: 'place red by i eight soon'
+2025-04-18 19:03:33 -  Pred:   'placeredbyieightsoon'
+2025-04-18 19:03:33 - --------------------
+2025-04-18 19:03:33 -  Target: 'set blue at m eight please'
+2025-04-18 19:03:33 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:03:33 - --------------------
+2025-04-18 19:03:33 -  Target: 'lay white by y five again'
+2025-04-18 19:03:33 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 19:03:33 - --------------------
+2025-04-18 19:03:33 - Epoch 15/50 Summary | Duration: 615.71s
+2025-04-18 19:03:33 -   Train Loss: -0.6489
+2025-04-18 19:03:33 -   Val Loss:   -0.6536
+2025-04-18 19:03:33 -   Val CER:    0.2589
+2025-04-18 19:03:33 - ----> Validation CER improved to 0.2589! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 19:13:49 - 
+--- Validation Examples ---
+2025-04-18 19:13:49 -  Target: 'bin white at d seven soon'
+2025-04-18 19:13:49 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 19:13:49 - --------------------
+2025-04-18 19:13:49 -  Target: 'place red at n six again'
+2025-04-18 19:13:49 -  Pred:   'placeredatssixagain'
+2025-04-18 19:13:49 - --------------------
+2025-04-18 19:13:49 -  Target: 'place red by i eight soon'
+2025-04-18 19:13:49 -  Pred:   'placeredbyieightsoon'
+2025-04-18 19:13:49 - --------------------
+2025-04-18 19:13:49 -  Target: 'set blue at m eight please'
+2025-04-18 19:13:49 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:13:49 - --------------------
+2025-04-18 19:13:49 -  Target: 'lay white by y five again'
+2025-04-18 19:13:49 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 19:13:49 - --------------------
+2025-04-18 19:13:49 - Epoch 16/50 Summary | Duration: 615.31s
+2025-04-18 19:13:49 -   Train Loss: -0.6498
+2025-04-18 19:13:49 -   Val Loss:   -0.6692
+2025-04-18 19:13:49 -   Val CER:    0.2565
+2025-04-18 19:13:49 - ----> Validation CER improved to 0.2565! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 19:24:04 - 
+--- Validation Examples ---
+2025-04-18 19:24:04 -  Target: 'bin white at d seven soon'
+2025-04-18 19:24:04 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 19:24:04 - --------------------
+2025-04-18 19:24:04 -  Target: 'place red at n six again'
+2025-04-18 19:24:04 -  Pred:   'placeredanssixagain'
+2025-04-18 19:24:04 - --------------------
+2025-04-18 19:24:04 -  Target: 'place red by i eight soon'
+2025-04-18 19:24:04 -  Pred:   'placeredbyieightsoon'
+2025-04-18 19:24:04 - --------------------
+2025-04-18 19:24:04 -  Target: 'set blue at m eight please'
+2025-04-18 19:24:04 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:24:04 - --------------------
+2025-04-18 19:24:04 -  Target: 'lay white by y five again'
+2025-04-18 19:24:04 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 19:24:04 - --------------------
+2025-04-18 19:24:04 - Epoch 17/50 Summary | Duration: 615.64s
+2025-04-18 19:24:04 -   Train Loss: -0.6377
+2025-04-18 19:24:04 -   Val Loss:   -0.6456
+2025-04-18 19:24:04 -   Val CER:    0.2577
+2025-04-18 19:24:04 - Validation CER did not improve. (1/10)
+2025-04-18 19:34:20 - 
+--- Validation Examples ---
+2025-04-18 19:34:20 -  Target: 'bin white at d seven soon'
+2025-04-18 19:34:20 -  Pred:   'binwhiteatdsevensoon'
+2025-04-18 19:34:20 - --------------------
+2025-04-18 19:34:20 -  Target: 'place red at n six again'
+2025-04-18 19:34:20 -  Pred:   'placeredatdsixagain'
+2025-04-18 19:34:20 - --------------------
+2025-04-18 19:34:20 -  Target: 'place red by i eight soon'
+2025-04-18 19:34:20 -  Pred:   'placeredbyaeightsoon'
+2025-04-18 19:34:20 - --------------------
+2025-04-18 19:34:20 -  Target: 'set blue at m eight please'
+2025-04-18 19:34:20 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:34:20 - --------------------
+2025-04-18 19:34:20 -  Target: 'lay white by y five again'
+2025-04-18 19:34:20 -  Pred:   'laywhiteityfiveagain'
+2025-04-18 19:34:20 - --------------------
+2025-04-18 19:34:20 - Epoch 18/50 Summary | Duration: 615.78s
+2025-04-18 19:34:20 -   Train Loss: -0.6522
+2025-04-18 19:34:20 -   Val Loss:   -0.6307
+2025-04-18 19:34:20 -   Val CER:    0.2573
+2025-04-18 19:34:20 - Validation CER did not improve. (2/10)
+2025-04-18 19:44:35 - 
+--- Validation Examples ---
+2025-04-18 19:44:35 -  Target: 'bin white at d seven soon'
+2025-04-18 19:44:35 -  Pred:   'binwhiteatzsevensoon'
+2025-04-18 19:44:35 - --------------------
+2025-04-18 19:44:35 -  Target: 'place red at n six again'
+2025-04-18 19:44:35 -  Pred:   'placereditssixagain'
+2025-04-18 19:44:35 - --------------------
+2025-04-18 19:44:35 -  Target: 'place red by i eight soon'
+2025-04-18 19:44:35 -  Pred:   'placeredbyreightsoon'
+2025-04-18 19:44:35 - --------------------
+2025-04-18 19:44:35 -  Target: 'set blue at m eight please'
+2025-04-18 19:44:35 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:44:35 - --------------------
+2025-04-18 19:44:35 -  Target: 'lay white by y five again'
+2025-04-18 19:44:35 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 19:44:35 - --------------------
+2025-04-18 19:44:35 - Epoch 19/50 Summary | Duration: 615.34s
+2025-04-18 19:44:35 -   Train Loss: -0.6522
+2025-04-18 19:44:35 -   Val Loss:   -0.6355
+2025-04-18 19:44:35 -   Val CER:    0.2535
+2025-04-18 19:44:35 - ----> Validation CER improved to 0.2535! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 19:54:51 - 
+--- Validation Examples ---
+2025-04-18 19:54:51 -  Target: 'bin white at d seven soon'
+2025-04-18 19:54:51 -  Pred:   'binwhiteitdsevensoon'
+2025-04-18 19:54:51 - --------------------
+2025-04-18 19:54:51 -  Target: 'place red at n six again'
+2025-04-18 19:54:51 -  Pred:   'placeredatssixagain'
+2025-04-18 19:54:51 - --------------------
+2025-04-18 19:54:51 -  Target: 'place red by i eight soon'
+2025-04-18 19:54:51 -  Pred:   'placeredbyieightsoon'
+2025-04-18 19:54:51 - --------------------
+2025-04-18 19:54:51 -  Target: 'set blue at m eight please'
+2025-04-18 19:54:51 -  Pred:   'setblueatmeightplease'
+2025-04-18 19:54:51 - --------------------
+2025-04-18 19:54:51 -  Target: 'lay white by y five again'
+2025-04-18 19:54:51 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 19:54:51 - --------------------
+2025-04-18 19:54:51 - Epoch 20/50 Summary | Duration: 615.55s
+2025-04-18 19:54:51 -   Train Loss: -0.6716
+2025-04-18 19:54:51 -   Val Loss:   -0.6729
+2025-04-18 19:54:51 -   Val CER:    0.2514
+2025-04-18 19:54:51 - ----> Validation CER improved to 0.2514! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 20:05:06 - 
+--- Validation Examples ---
+2025-04-18 20:05:06 -  Target: 'bin white at d seven soon'
+2025-04-18 20:05:06 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 20:05:06 - --------------------
+2025-04-18 20:05:06 -  Target: 'place red at n six again'
+2025-04-18 20:05:06 -  Pred:   'placeredanssixagain'
+2025-04-18 20:05:06 - --------------------
+2025-04-18 20:05:06 -  Target: 'place red by i eight soon'
+2025-04-18 20:05:06 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:05:06 - --------------------
+2025-04-18 20:05:06 -  Target: 'set blue at m eight please'
+2025-04-18 20:05:06 -  Pred:   'setblueanmeightplease'
+2025-04-18 20:05:06 - --------------------
+2025-04-18 20:05:06 -  Target: 'lay white by y five again'
+2025-04-18 20:05:06 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:05:06 - --------------------
+2025-04-18 20:05:06 - Epoch 21/50 Summary | Duration: 614.92s
+2025-04-18 20:05:06 -   Train Loss: -0.6747
+2025-04-18 20:05:06 -   Val Loss:   -0.6613
+2025-04-18 20:05:06 -   Val CER:    0.2537
+2025-04-18 20:05:06 - Validation CER did not improve. (1/10)
+2025-04-18 20:15:21 - 
+--- Validation Examples ---
+2025-04-18 20:15:21 -  Target: 'bin white at d seven soon'
+2025-04-18 20:15:21 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 20:15:21 - --------------------
+2025-04-18 20:15:21 -  Target: 'place red at n six again'
+2025-04-18 20:15:21 -  Pred:   'placereditssixagain'
+2025-04-18 20:15:21 - --------------------
+2025-04-18 20:15:21 -  Target: 'place red by i eight soon'
+2025-04-18 20:15:21 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:15:21 - --------------------
+2025-04-18 20:15:21 -  Target: 'set blue at m eight please'
+2025-04-18 20:15:21 -  Pred:   'setblueatmeightplease'
+2025-04-18 20:15:21 - --------------------
+2025-04-18 20:15:21 -  Target: 'lay white by y five again'
+2025-04-18 20:15:21 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:15:21 - --------------------
+2025-04-18 20:15:21 - Epoch 22/50 Summary | Duration: 615.19s
+2025-04-18 20:15:21 -   Train Loss: -0.6749
+2025-04-18 20:15:21 -   Val Loss:   -0.6747
+2025-04-18 20:15:21 -   Val CER:    0.2494
+2025-04-18 20:15:21 - ----> Validation CER improved to 0.2494! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 20:25:41 - 
+--- Validation Examples ---
+2025-04-18 20:25:41 -  Target: 'bin white at d seven soon'
+2025-04-18 20:25:41 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 20:25:41 - --------------------
+2025-04-18 20:25:41 -  Target: 'place red at n six again'
+2025-04-18 20:25:41 -  Pred:   'placeredinssixagain'
+2025-04-18 20:25:41 - --------------------
+2025-04-18 20:25:41 -  Target: 'place red by i eight soon'
+2025-04-18 20:25:41 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:25:41 - --------------------
+2025-04-18 20:25:41 -  Target: 'set blue at m eight please'
+2025-04-18 20:25:41 -  Pred:   'setblueatmeightplease'
+2025-04-18 20:25:41 - --------------------
+2025-04-18 20:25:41 -  Target: 'lay white by y five again'
+2025-04-18 20:25:41 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:25:41 - --------------------
+2025-04-18 20:25:41 - Epoch 23/50 Summary | Duration: 620.22s
+2025-04-18 20:25:41 -   Train Loss: -0.6597
+2025-04-18 20:25:41 -   Val Loss:   -0.6767
+2025-04-18 20:25:41 -   Val CER:    0.2512
+2025-04-18 20:25:41 - Validation CER did not improve. (1/10)
+2025-04-18 20:36:03 - 
+--- Validation Examples ---
+2025-04-18 20:36:03 -  Target: 'bin white at d seven soon'
+2025-04-18 20:36:03 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 20:36:03 - --------------------
+2025-04-18 20:36:03 -  Target: 'place red at n six again'
+2025-04-18 20:36:03 -  Pred:   'placeredatssixagain'
+2025-04-18 20:36:03 - --------------------
+2025-04-18 20:36:03 -  Target: 'place red by i eight soon'
+2025-04-18 20:36:03 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:36:03 - --------------------
+2025-04-18 20:36:03 -  Target: 'set blue at m eight please'
+2025-04-18 20:36:03 -  Pred:   'setblueatmeightplease'
+2025-04-18 20:36:03 - --------------------
+2025-04-18 20:36:03 -  Target: 'lay white by y five again'
+2025-04-18 20:36:03 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:36:03 - --------------------
+2025-04-18 20:36:03 - Epoch 24/50 Summary | Duration: 621.21s
+2025-04-18 20:36:03 -   Train Loss: -0.6755
+2025-04-18 20:36:03 -   Val Loss:   -0.7023
+2025-04-18 20:36:03 -   Val CER:    0.2456
+2025-04-18 20:36:03 - ----> Validation CER improved to 0.2456! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 20:46:26 - 
+--- Validation Examples ---
+2025-04-18 20:46:26 -  Target: 'bin white at d seven soon'
+2025-04-18 20:46:26 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 20:46:26 - --------------------
+2025-04-18 20:46:26 -  Target: 'place red at n six again'
+2025-04-18 20:46:26 -  Pred:   'placereditssixagain'
+2025-04-18 20:46:26 - --------------------
+2025-04-18 20:46:26 -  Target: 'place red by i eight soon'
+2025-04-18 20:46:26 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:46:26 - --------------------
+2025-04-18 20:46:26 -  Target: 'set blue at m eight please'
+2025-04-18 20:46:26 -  Pred:   'setblueatmeightplease'
+2025-04-18 20:46:26 - --------------------
+2025-04-18 20:46:26 -  Target: 'lay white by y five again'
+2025-04-18 20:46:26 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:46:26 - --------------------
+2025-04-18 20:46:26 - Epoch 25/50 Summary | Duration: 623.27s
+2025-04-18 20:46:26 -   Train Loss: -0.6840
+2025-04-18 20:46:26 -   Val Loss:   -0.6663
+2025-04-18 20:46:26 -   Val CER:    0.2485
+2025-04-18 20:46:26 - Validation CER did not improve. (1/10)
+2025-04-18 20:56:49 - 
+--- Validation Examples ---
+2025-04-18 20:56:49 -  Target: 'bin white at d seven soon'
+2025-04-18 20:56:49 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 20:56:49 - --------------------
+2025-04-18 20:56:49 -  Target: 'place red at n six again'
+2025-04-18 20:56:49 -  Pred:   'placereditssixagain'
+2025-04-18 20:56:49 - --------------------
+2025-04-18 20:56:49 -  Target: 'place red by i eight soon'
+2025-04-18 20:56:49 -  Pred:   'placeredbyieightsoon'
+2025-04-18 20:56:49 - --------------------
+2025-04-18 20:56:49 -  Target: 'set blue at m eight please'
+2025-04-18 20:56:49 -  Pred:   'setblueatmeightplease'
+2025-04-18 20:56:49 - --------------------
+2025-04-18 20:56:49 -  Target: 'lay white by y five again'
+2025-04-18 20:56:49 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 20:56:49 - --------------------
+2025-04-18 20:56:49 - Epoch 26/50 Summary | Duration: 622.79s
+2025-04-18 20:56:49 -   Train Loss: -0.7047
+2025-04-18 20:56:49 -   Val Loss:   -0.7057
+2025-04-18 20:56:49 -   Val CER:    0.2450
+2025-04-18 20:56:54 - ----> Validation CER improved to 0.2450! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 21:07:20 - 
+--- Validation Examples ---
+2025-04-18 21:07:20 -  Target: 'bin white at d seven soon'
+2025-04-18 21:07:20 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 21:07:20 - --------------------
+2025-04-18 21:07:20 -  Target: 'place red at n six again'
+2025-04-18 21:07:20 -  Pred:   'placeredatssixagain'
+2025-04-18 21:07:20 - --------------------
+2025-04-18 21:07:20 -  Target: 'place red by i eight soon'
+2025-04-18 21:07:20 -  Pred:   'placeredbyieightsoon'
+2025-04-18 21:07:20 - --------------------
+2025-04-18 21:07:20 -  Target: 'set blue at m eight please'
+2025-04-18 21:07:20 -  Pred:   'setblueatmeightplease'
+2025-04-18 21:07:20 - --------------------
+2025-04-18 21:07:20 -  Target: 'lay white by y five again'
+2025-04-18 21:07:20 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 21:07:20 - --------------------
+2025-04-18 21:07:20 - Epoch 27/50 Summary | Duration: 626.23s
+2025-04-18 21:07:20 -   Train Loss: -0.7119
+2025-04-18 21:07:20 -   Val Loss:   -0.6966
+2025-04-18 21:07:20 -   Val CER:    0.2452
+2025-04-18 21:07:20 - Validation CER did not improve. (1/10)
+2025-04-18 21:20:58 - 
+--- Validation Examples ---
+2025-04-18 21:20:58 -  Target: 'bin white at d seven soon'
+2025-04-18 21:20:58 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 21:20:58 - --------------------
+2025-04-18 21:20:58 -  Target: 'place red at n six again'
+2025-04-18 21:20:58 -  Pred:   'placeredatnsixagain'
+2025-04-18 21:20:58 - --------------------
+2025-04-18 21:20:58 -  Target: 'place red by i eight soon'
+2025-04-18 21:20:58 -  Pred:   'placeredbyieightsoon'
+2025-04-18 21:20:58 - --------------------
+2025-04-18 21:20:58 -  Target: 'set blue at m eight please'
+2025-04-18 21:20:58 -  Pred:   'setblueatmeightplease'
+2025-04-18 21:20:58 - --------------------
+2025-04-18 21:20:58 -  Target: 'lay white by y five again'
+2025-04-18 21:20:58 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 21:20:58 - --------------------
+2025-04-18 21:20:58 - Epoch 28/50 Summary | Duration: 817.21s
+2025-04-18 21:20:58 -   Train Loss: -0.7154
+2025-04-18 21:20:58 -   Val Loss:   -0.7145
+2025-04-18 21:20:58 -   Val CER:    0.2415
+2025-04-18 21:20:58 - ----> Validation CER improved to 0.2415! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 21:40:48 - 
+--- Validation Examples ---
+2025-04-18 21:40:48 -  Target: 'bin white at d seven soon'
+2025-04-18 21:40:48 -  Pred:   'binwhiteattsevensoon'
+2025-04-18 21:40:48 - --------------------
+2025-04-18 21:40:48 -  Target: 'place red at n six again'
+2025-04-18 21:40:48 -  Pred:   'placeredanssixagain'
+2025-04-18 21:40:48 - --------------------
+2025-04-18 21:40:48 -  Target: 'place red by i eight soon'
+2025-04-18 21:40:48 -  Pred:   'placeredbyieightsoon'
+2025-04-18 21:40:48 - --------------------
+2025-04-18 21:40:48 -  Target: 'set blue at m eight please'
+2025-04-18 21:40:48 -  Pred:   'setblueatmeightplease'
+2025-04-18 21:40:48 - --------------------
+2025-04-18 21:40:48 -  Target: 'lay white by y five again'
+2025-04-18 21:40:48 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 21:40:48 - --------------------
+2025-04-18 21:40:48 - Epoch 29/50 Summary | Duration: 1190.34s
+2025-04-18 21:40:48 -   Train Loss: -0.6933
+2025-04-18 21:40:48 -   Val Loss:   -0.6917
+2025-04-18 21:40:48 -   Val CER:    0.2461
+2025-04-18 21:40:48 - Validation CER did not improve. (1/10)
+2025-04-18 21:57:57 - 
+--- Validation Examples ---
+2025-04-18 21:57:57 -  Target: 'bin white at d seven soon'
+2025-04-18 21:57:57 -  Pred:   'binwhiteanzsevensoon'
+2025-04-18 21:57:57 - --------------------
+2025-04-18 21:57:57 -  Target: 'place red at n six again'
+2025-04-18 21:57:57 -  Pred:   'placeredinssixagain'
+2025-04-18 21:57:57 - --------------------
+2025-04-18 21:57:57 -  Target: 'place red by i eight soon'
+2025-04-18 21:57:57 -  Pred:   'placeredbyieightsoon'
+2025-04-18 21:57:57 - --------------------
+2025-04-18 21:57:57 -  Target: 'set blue at m eight please'
+2025-04-18 21:57:57 -  Pred:   'setblueatmeightplease'
+2025-04-18 21:57:57 - --------------------
+2025-04-18 21:57:57 -  Target: 'lay white by y five again'
+2025-04-18 21:57:57 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 21:57:57 - --------------------
+2025-04-18 21:57:57 - Epoch 30/50 Summary | Duration: 1028.71s
+2025-04-18 21:57:57 -   Train Loss: -0.7085
+2025-04-18 21:57:57 -   Val Loss:   -0.7007
+2025-04-18 21:57:57 -   Val CER:    0.2459
+2025-04-18 21:57:57 - Validation CER did not improve. (2/10)
+2025-04-18 22:14:56 - 
+--- Validation Examples ---
+2025-04-18 22:14:56 -  Target: 'bin white at d seven soon'
+2025-04-18 22:14:56 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 22:14:56 - --------------------
+2025-04-18 22:14:56 -  Target: 'place red at n six again'
+2025-04-18 22:14:56 -  Pred:   'placeredatssixagain'
+2025-04-18 22:14:56 - --------------------
+2025-04-18 22:14:56 -  Target: 'place red by i eight soon'
+2025-04-18 22:14:56 -  Pred:   'placeredbyieightsoon'
+2025-04-18 22:14:56 - --------------------
+2025-04-18 22:14:56 -  Target: 'set blue at m eight please'
+2025-04-18 22:14:56 -  Pred:   'setblueatmeightplease'
+2025-04-18 22:14:56 - --------------------
+2025-04-18 22:14:56 -  Target: 'lay white by y five again'
+2025-04-18 22:14:56 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 22:14:56 - --------------------
+2025-04-18 22:14:56 - Epoch 31/50 Summary | Duration: 1019.43s
+2025-04-18 22:14:56 -   Train Loss: -0.6946
+2025-04-18 22:14:56 -   Val Loss:   -0.6748
+2025-04-18 22:14:56 -   Val CER:    0.2471
+2025-04-18 22:14:56 - Validation CER did not improve. (3/10)
+2025-04-18 22:26:35 - 
+--- Validation Examples ---
+2025-04-18 22:26:35 -  Target: 'bin white at d seven soon'
+2025-04-18 22:26:35 -  Pred:   'binwhiteatdsevensoon'
+2025-04-18 22:26:35 - --------------------
+2025-04-18 22:26:35 -  Target: 'place red at n six again'
+2025-04-18 22:26:35 -  Pred:   'placereditnsixagain'
+2025-04-18 22:26:35 - --------------------
+2025-04-18 22:26:35 -  Target: 'place red by i eight soon'
+2025-04-18 22:26:35 -  Pred:   'placeredbyieightsoon'
+2025-04-18 22:26:35 - --------------------
+2025-04-18 22:26:35 -  Target: 'set blue at m eight please'
+2025-04-18 22:26:35 -  Pred:   'setblueatmeightplease'
+2025-04-18 22:26:35 - --------------------
+2025-04-18 22:26:35 -  Target: 'lay white by y five again'
+2025-04-18 22:26:35 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 22:26:35 - --------------------
+2025-04-18 22:26:35 - Epoch 32/50 Summary | Duration: 698.39s
+2025-04-18 22:26:35 -   Train Loss: -0.6945
+2025-04-18 22:26:35 -   Val Loss:   -0.6840
+2025-04-18 22:26:35 -   Val CER:    0.2438
+2025-04-18 22:26:35 - Validation CER did not improve. (4/10)
+2025-04-18 22:36:59 - 
+--- Validation Examples ---
+2025-04-18 22:36:59 -  Target: 'bin white at d seven soon'
+2025-04-18 22:36:59 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 22:36:59 - --------------------
+2025-04-18 22:36:59 -  Target: 'place red at n six again'
+2025-04-18 22:36:59 -  Pred:   'placeredinssixagain'
+2025-04-18 22:36:59 - --------------------
+2025-04-18 22:36:59 -  Target: 'place red by i eight soon'
+2025-04-18 22:36:59 -  Pred:   'placeredbyieightsoon'
+2025-04-18 22:36:59 - --------------------
+2025-04-18 22:36:59 -  Target: 'set blue at m eight please'
+2025-04-18 22:36:59 -  Pred:   'setblueatmeightplease'
+2025-04-18 22:36:59 - --------------------
+2025-04-18 22:36:59 -  Target: 'lay white by y five again'
+2025-04-18 22:36:59 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 22:36:59 - --------------------
+2025-04-18 22:36:59 - Epoch 33/50 Summary | Duration: 624.61s
+2025-04-18 22:36:59 -   Train Loss: -0.7032
+2025-04-18 22:36:59 -   Val Loss:   -0.6920
+2025-04-18 22:36:59 -   Val CER:    0.2421
+2025-04-18 22:36:59 - Validation CER did not improve. (5/10)
+2025-04-18 22:47:24 - 
+--- Validation Examples ---
+2025-04-18 22:47:24 -  Target: 'bin white at d seven soon'
+2025-04-18 22:47:24 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 22:47:24 - --------------------
+2025-04-18 22:47:24 -  Target: 'place red at n six again'
+2025-04-18 22:47:24 -  Pred:   'placereditnsixagain'
+2025-04-18 22:47:24 - --------------------
+2025-04-18 22:47:24 -  Target: 'place red by i eight soon'
+2025-04-18 22:47:24 -  Pred:   'placeredbyieightsoon'
+2025-04-18 22:47:24 - --------------------
+2025-04-18 22:47:24 -  Target: 'set blue at m eight please'
+2025-04-18 22:47:24 -  Pred:   'setblueatmeightplease'
+2025-04-18 22:47:24 - --------------------
+2025-04-18 22:47:24 -  Target: 'lay white by y five again'
+2025-04-18 22:47:24 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 22:47:24 - --------------------
+2025-04-18 22:47:24 - Epoch 34/50 Summary | Duration: 625.08s
+2025-04-18 22:47:24 -   Train Loss: -0.6553
+2025-04-18 22:47:24 -   Val Loss:   -0.5521
+2025-04-18 22:47:24 -   Val CER:    0.2566
+2025-04-18 22:47:24 - Validation CER did not improve. (6/10)
+2025-04-18 22:57:47 - 
+--- Validation Examples ---
+2025-04-18 22:57:47 -  Target: 'bin white at d seven soon'
+2025-04-18 22:57:47 -  Pred:   'binwhiteatdnevensoon'
+2025-04-18 22:57:47 - --------------------
+2025-04-18 22:57:47 -  Target: 'place red at n six again'
+2025-04-18 22:57:47 -  Pred:   'placeredatssixagain'
+2025-04-18 22:57:47 - --------------------
+2025-04-18 22:57:47 -  Target: 'place red by i eight soon'
+2025-04-18 22:57:47 -  Pred:   'placeredbyieightsoon'
+2025-04-18 22:57:47 - --------------------
+2025-04-18 22:57:47 -  Target: 'set blue at m eight please'
+2025-04-18 22:57:47 -  Pred:   'setblueatmeightplease'
+2025-04-18 22:57:47 - --------------------
+2025-04-18 22:57:47 -  Target: 'lay white by y five again'
+2025-04-18 22:57:47 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 22:57:47 - --------------------
+2025-04-18 22:57:47 - Epoch 35/50 Summary | Duration: 622.43s
+2025-04-18 22:57:47 -   Train Loss: -0.7054
+2025-04-18 22:57:47 -   Val Loss:   -0.7122
+2025-04-18 22:57:47 -   Val CER:    0.2356
+2025-04-18 22:57:47 - ----> Validation CER improved to 0.2356! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 23:08:07 - 
+--- Validation Examples ---
+2025-04-18 23:08:07 -  Target: 'bin white at d seven soon'
+2025-04-18 23:08:07 -  Pred:   'binwhiteitdsevensoon'
+2025-04-18 23:08:07 - --------------------
+2025-04-18 23:08:07 -  Target: 'place red at n six again'
+2025-04-18 23:08:07 -  Pred:   'placeredatssixagain'
+2025-04-18 23:08:07 - --------------------
+2025-04-18 23:08:07 -  Target: 'place red by i eight soon'
+2025-04-18 23:08:07 -  Pred:   'placeredbyieightsoon'
+2025-04-18 23:08:07 - --------------------
+2025-04-18 23:08:07 -  Target: 'set blue at m eight please'
+2025-04-18 23:08:07 -  Pred:   'setblueatmeightplease'
+2025-04-18 23:08:07 - --------------------
+2025-04-18 23:08:07 -  Target: 'lay white by y five again'
+2025-04-18 23:08:07 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 23:08:07 - --------------------
+2025-04-18 23:08:07 - Epoch 36/50 Summary | Duration: 620.45s
+2025-04-18 23:08:07 -   Train Loss: -0.7311
+2025-04-18 23:08:07 -   Val Loss:   -0.7361
+2025-04-18 23:08:07 -   Val CER:    0.2343
+2025-04-18 23:08:07 - ----> Validation CER improved to 0.2343! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-18 23:18:31 - 
+--- Validation Examples ---
+2025-04-18 23:18:31 -  Target: 'bin white at d seven soon'
+2025-04-18 23:18:31 -  Pred:   'binwhiteatdsevensoon'
+2025-04-18 23:18:31 - --------------------
+2025-04-18 23:18:31 -  Target: 'place red at n six again'
+2025-04-18 23:18:31 -  Pred:   'placeredatssixagain'
+2025-04-18 23:18:31 - --------------------
+2025-04-18 23:18:31 -  Target: 'place red by i eight soon'
+2025-04-18 23:18:31 -  Pred:   'placeredbyieightsoon'
+2025-04-18 23:18:31 - --------------------
+2025-04-18 23:18:31 -  Target: 'set blue at m eight please'
+2025-04-18 23:18:31 -  Pred:   'setblueatmeightplease'
+2025-04-18 23:18:31 - --------------------
+2025-04-18 23:18:31 -  Target: 'lay white by y five again'
+2025-04-18 23:18:31 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 23:18:31 - --------------------
+2025-04-18 23:18:31 - Epoch 37/50 Summary | Duration: 623.44s
+2025-04-18 23:18:31 -   Train Loss: -0.7350
+2025-04-18 23:18:31 -   Val Loss:   -0.7014
+2025-04-18 23:18:31 -   Val CER:    0.2361
+2025-04-18 23:18:31 - Validation CER did not improve. (1/10)
+2025-04-18 23:28:55 - 
+--- Validation Examples ---
+2025-04-18 23:28:55 -  Target: 'bin white at d seven soon'
+2025-04-18 23:28:55 -  Pred:   'binwhiteatdsevensoon'
+2025-04-18 23:28:55 - --------------------
+2025-04-18 23:28:55 -  Target: 'place red at n six again'
+2025-04-18 23:28:55 -  Pred:   'placereditnsixagain'
+2025-04-18 23:28:55 - --------------------
+2025-04-18 23:28:55 -  Target: 'place red by i eight soon'
+2025-04-18 23:28:55 -  Pred:   'placeredbyieightsoon'
+2025-04-18 23:28:55 - --------------------
+2025-04-18 23:28:55 -  Target: 'set blue at m eight please'
+2025-04-18 23:28:55 -  Pred:   'setblueatmeightplease'
+2025-04-18 23:28:55 - --------------------
+2025-04-18 23:28:55 -  Target: 'lay white by y five again'
+2025-04-18 23:28:55 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 23:28:55 - --------------------
+2025-04-18 23:28:55 - Epoch 38/50 Summary | Duration: 624.16s
+2025-04-18 23:28:55 -   Train Loss: -0.7144
+2025-04-18 23:28:55 -   Val Loss:   -0.7082
+2025-04-18 23:28:55 -   Val CER:    0.2351
+2025-04-18 23:28:55 - Validation CER did not improve. (2/10)
+2025-04-18 23:39:19 - 
+--- Validation Examples ---
+2025-04-18 23:39:19 -  Target: 'bin white at d seven soon'
+2025-04-18 23:39:19 -  Pred:   'binwhiteitdsevensoon'
+2025-04-18 23:39:19 - --------------------
+2025-04-18 23:39:19 -  Target: 'place red at n six again'
+2025-04-18 23:39:19 -  Pred:   'placeredatnsixagain'
+2025-04-18 23:39:19 - --------------------
+2025-04-18 23:39:19 -  Target: 'place red by i eight soon'
+2025-04-18 23:39:19 -  Pred:   'placeredbyieightsoon'
+2025-04-18 23:39:19 - --------------------
+2025-04-18 23:39:19 -  Target: 'set blue at m eight please'
+2025-04-18 23:39:19 -  Pred:   'setblueatmeightplease'
+2025-04-18 23:39:19 - --------------------
+2025-04-18 23:39:19 -  Target: 'lay white by y five again'
+2025-04-18 23:39:19 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 23:39:19 - --------------------
+2025-04-18 23:39:19 - Epoch 39/50 Summary | Duration: 624.37s
+2025-04-18 23:39:19 -   Train Loss: -0.6308
+2025-04-18 23:39:19 -   Val Loss:   -0.6203
+2025-04-18 23:39:19 -   Val CER:    0.2382
+2025-04-18 23:39:19 - Validation CER did not improve. (3/10)
+2025-04-18 23:49:43 - 
+--- Validation Examples ---
+2025-04-18 23:49:43 -  Target: 'bin white at d seven soon'
+2025-04-18 23:49:43 -  Pred:   'binwhiteatcsevensoon'
+2025-04-18 23:49:43 - --------------------
+2025-04-18 23:49:43 -  Target: 'place red at n six again'
+2025-04-18 23:49:43 -  Pred:   'placeredatssixagain'
+2025-04-18 23:49:43 - --------------------
+2025-04-18 23:49:43 -  Target: 'place red by i eight soon'
+2025-04-18 23:49:43 -  Pred:   'placeredbyieightsoon'
+2025-04-18 23:49:43 - --------------------
+2025-04-18 23:49:43 -  Target: 'set blue at m eight please'
+2025-04-18 23:49:43 -  Pred:   'setblueatmeightplease'
+2025-04-18 23:49:43 - --------------------
+2025-04-18 23:49:43 -  Target: 'lay white by y five again'
+2025-04-18 23:49:43 -  Pred:   'laywhitebyyfiveagain'
+2025-04-18 23:49:43 - --------------------
+2025-04-18 23:49:43 - Epoch 40/50 Summary | Duration: 624.03s
+2025-04-18 23:49:43 -   Train Loss: -0.6872
+2025-04-18 23:49:43 -   Val Loss:   -0.6786
+2025-04-18 23:49:43 -   Val CER:    0.2355
+2025-04-18 23:49:43 - Validation CER did not improve. (4/10)
+2025-04-19 00:00:07 - 
+--- Validation Examples ---
+2025-04-19 00:00:07 -  Target: 'bin white at d seven soon'
+2025-04-19 00:00:07 -  Pred:   'binwhiteatcsevensoon'
+2025-04-19 00:00:07 - --------------------
+2025-04-19 00:00:07 -  Target: 'place red at n six again'
+2025-04-19 00:00:07 -  Pred:   'placeredatssixagain'
+2025-04-19 00:00:07 - --------------------
+2025-04-19 00:00:07 -  Target: 'place red by i eight soon'
+2025-04-19 00:00:07 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:00:07 - --------------------
+2025-04-19 00:00:07 -  Target: 'set blue at m eight please'
+2025-04-19 00:00:07 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:00:07 - --------------------
+2025-04-19 00:00:07 -  Target: 'lay white by y five again'
+2025-04-19 00:00:07 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 00:00:07 - --------------------
+2025-04-19 00:00:07 - Epoch 41/50 Summary | Duration: 624.23s
+2025-04-19 00:00:07 -   Train Loss: -0.6974
+2025-04-19 00:00:07 -   Val Loss:   -0.7065
+2025-04-19 00:00:07 -   Val CER:    0.2320
+2025-04-19 00:00:08 - ----> Validation CER improved to 0.2320! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-19 00:10:31 - 
+--- Validation Examples ---
+2025-04-19 00:10:31 -  Target: 'bin white at d seven soon'
+2025-04-19 00:10:31 -  Pred:   'binwhiteatsevensoon'
+2025-04-19 00:10:31 - --------------------
+2025-04-19 00:10:31 -  Target: 'place red at n six again'
+2025-04-19 00:10:31 -  Pred:   'placereditssixagain'
+2025-04-19 00:10:31 - --------------------
+2025-04-19 00:10:31 -  Target: 'place red by i eight soon'
+2025-04-19 00:10:31 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:10:31 - --------------------
+2025-04-19 00:10:31 -  Target: 'set blue at m eight please'
+2025-04-19 00:10:31 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:10:31 - --------------------
+2025-04-19 00:10:31 -  Target: 'lay white by y five again'
+2025-04-19 00:10:31 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 00:10:31 - --------------------
+2025-04-19 00:10:31 - Epoch 42/50 Summary | Duration: 623.70s
+2025-04-19 00:10:31 -   Train Loss: -0.7084
+2025-04-19 00:10:31 -   Val Loss:   -0.3287
+2025-04-19 00:10:31 -   Val CER:    0.2546
+2025-04-19 00:10:31 - Validation CER did not improve. (1/10)
+2025-04-19 00:20:55 - 
+--- Validation Examples ---
+2025-04-19 00:20:55 -  Target: 'bin white at d seven soon'
+2025-04-19 00:20:55 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 00:20:55 - --------------------
+2025-04-19 00:20:55 -  Target: 'place red at n six again'
+2025-04-19 00:20:55 -  Pred:   'placeredatssixagain'
+2025-04-19 00:20:55 - --------------------
+2025-04-19 00:20:55 -  Target: 'place red by i eight soon'
+2025-04-19 00:20:55 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:20:55 - --------------------
+2025-04-19 00:20:55 -  Target: 'set blue at m eight please'
+2025-04-19 00:20:55 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:20:55 - --------------------
+2025-04-19 00:20:55 -  Target: 'lay white by y five again'
+2025-04-19 00:20:55 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 00:20:55 - --------------------
+2025-04-19 00:20:55 - Epoch 43/50 Summary | Duration: 624.03s
+2025-04-19 00:20:55 -   Train Loss: -0.6298
+2025-04-19 00:20:55 -   Val Loss:   -0.6675
+2025-04-19 00:20:55 -   Val CER:    0.2357
+2025-04-19 00:20:55 - Validation CER did not improve. (2/10)
+2025-04-19 00:31:19 - 
+--- Validation Examples ---
+2025-04-19 00:31:19 -  Target: 'bin white at d seven soon'
+2025-04-19 00:31:19 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 00:31:19 - --------------------
+2025-04-19 00:31:19 -  Target: 'place red at n six again'
+2025-04-19 00:31:19 -  Pred:   'placereditsixagain'
+2025-04-19 00:31:19 - --------------------
+2025-04-19 00:31:19 -  Target: 'place red by i eight soon'
+2025-04-19 00:31:19 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:31:19 - --------------------
+2025-04-19 00:31:19 -  Target: 'set blue at m eight please'
+2025-04-19 00:31:19 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:31:19 - --------------------
+2025-04-19 00:31:19 -  Target: 'lay white by y five again'
+2025-04-19 00:31:19 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 00:31:19 - --------------------
+2025-04-19 00:31:19 - Epoch 44/50 Summary | Duration: 623.47s
+2025-04-19 00:31:19 -   Train Loss: -0.6483
+2025-04-19 00:31:19 -   Val Loss:   -0.6515
+2025-04-19 00:31:19 -   Val CER:    0.2343
+2025-04-19 00:31:19 - Validation CER did not improve. (3/10)
+2025-04-19 00:41:42 - 
+--- Validation Examples ---
+2025-04-19 00:41:42 -  Target: 'bin white at d seven soon'
+2025-04-19 00:41:42 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 00:41:42 - --------------------
+2025-04-19 00:41:42 -  Target: 'place red at n six again'
+2025-04-19 00:41:42 -  Pred:   'placeredinssixagain'
+2025-04-19 00:41:42 - --------------------
+2025-04-19 00:41:42 -  Target: 'place red by i eight soon'
+2025-04-19 00:41:42 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:41:42 - --------------------
+2025-04-19 00:41:42 -  Target: 'set blue at m eight please'
+2025-04-19 00:41:42 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:41:42 - --------------------
+2025-04-19 00:41:42 -  Target: 'lay white by y five again'
+2025-04-19 00:41:42 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 00:41:42 - --------------------
+2025-04-19 00:41:42 - Epoch 45/50 Summary | Duration: 623.33s
+2025-04-19 00:41:42 -   Train Loss: -0.6787
+2025-04-19 00:41:42 -   Val Loss:   -0.6674
+2025-04-19 00:41:42 -   Val CER:    0.2340
+2025-04-19 00:41:42 - Validation CER did not improve. (4/10)
+2025-04-19 00:52:05 - 
+--- Validation Examples ---
+2025-04-19 00:52:05 -  Target: 'bin white at d seven soon'
+2025-04-19 00:52:05 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 00:52:05 - --------------------
+2025-04-19 00:52:05 -  Target: 'place red at n six again'
+2025-04-19 00:52:05 -  Pred:   'placeredatnsixagain'
+2025-04-19 00:52:05 - --------------------
+2025-04-19 00:52:05 -  Target: 'place red by i eight soon'
+2025-04-19 00:52:05 -  Pred:   'placeredbyieightsoon'
+2025-04-19 00:52:05 - --------------------
+2025-04-19 00:52:05 -  Target: 'set blue at m eight please'
+2025-04-19 00:52:05 -  Pred:   'setblueatmeightplease'
+2025-04-19 00:52:05 - --------------------
+2025-04-19 00:52:05 -  Target: 'lay white by y five again'
+2025-04-19 00:52:05 -  Pred:   'laywhitebyyiveagain'
+2025-04-19 00:52:05 - --------------------
+2025-04-19 00:52:05 - Epoch 46/50 Summary | Duration: 623.00s
+2025-04-19 00:52:05 -   Train Loss: -0.6276
+2025-04-19 00:52:05 -   Val Loss:   -0.6223
+2025-04-19 00:52:05 -   Val CER:    0.2325
+2025-04-19 00:52:05 - Validation CER did not improve. (5/10)
+2025-04-19 01:02:28 - 
+--- Validation Examples ---
+2025-04-19 01:02:28 -  Target: 'bin white at d seven soon'
+2025-04-19 01:02:28 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 01:02:28 - --------------------
+2025-04-19 01:02:28 -  Target: 'place red at n six again'
+2025-04-19 01:02:28 -  Pred:   'placeredatssixagain'
+2025-04-19 01:02:28 - --------------------
+2025-04-19 01:02:28 -  Target: 'place red by i eight soon'
+2025-04-19 01:02:28 -  Pred:   'placeredbyieightsoon'
+2025-04-19 01:02:28 - --------------------
+2025-04-19 01:02:28 -  Target: 'set blue at m eight please'
+2025-04-19 01:02:28 -  Pred:   'setblueatmeightplease'
+2025-04-19 01:02:28 - --------------------
+2025-04-19 01:02:28 -  Target: 'lay white by y five again'
+2025-04-19 01:02:28 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 01:02:28 - --------------------
+2025-04-19 01:02:28 - Epoch 47/50 Summary | Duration: 623.35s
+2025-04-19 01:02:28 -   Train Loss: -0.6448
+2025-04-19 01:02:28 -   Val Loss:   -0.6272
+2025-04-19 01:02:28 -   Val CER:    0.2354
+2025-04-19 01:02:28 - Validation CER did not improve. (6/10)
+2025-04-19 01:12:52 - 
+--- Validation Examples ---
+2025-04-19 01:12:52 -  Target: 'bin white at d seven soon'
+2025-04-19 01:12:52 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 01:12:52 - --------------------
+2025-04-19 01:12:52 -  Target: 'place red at n six again'
+2025-04-19 01:12:52 -  Pred:   'placeredatnsixagain'
+2025-04-19 01:12:52 - --------------------
+2025-04-19 01:12:52 -  Target: 'place red by i eight soon'
+2025-04-19 01:12:52 -  Pred:   'placeredbyieightsoon'
+2025-04-19 01:12:52 - --------------------
+2025-04-19 01:12:52 -  Target: 'set blue at m eight please'
+2025-04-19 01:12:52 -  Pred:   'setblueatmeightplease'
+2025-04-19 01:12:52 - --------------------
+2025-04-19 01:12:52 -  Target: 'lay white by y five again'
+2025-04-19 01:12:52 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 01:12:52 - --------------------
+2025-04-19 01:12:52 - Epoch 48/50 Summary | Duration: 623.37s
+2025-04-19 01:12:52 -   Train Loss: -0.6623
+2025-04-19 01:12:52 -   Val Loss:   -0.6589
+2025-04-19 01:12:52 -   Val CER:    0.2289
+2025-04-19 01:12:52 - ----> Validation CER improved to 0.2289! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-19 01:23:15 - 
+--- Validation Examples ---
+2025-04-19 01:23:15 -  Target: 'bin white at d seven soon'
+2025-04-19 01:23:15 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 01:23:15 - --------------------
+2025-04-19 01:23:15 -  Target: 'place red at n six again'
+2025-04-19 01:23:15 -  Pred:   'placeredatnsixagain'
+2025-04-19 01:23:15 - --------------------
+2025-04-19 01:23:15 -  Target: 'place red by i eight soon'
+2025-04-19 01:23:15 -  Pred:   'placeredbyieightsoon'
+2025-04-19 01:23:15 - --------------------
+2025-04-19 01:23:15 -  Target: 'set blue at m eight please'
+2025-04-19 01:23:15 -  Pred:   'setblueatmeightplease'
+2025-04-19 01:23:15 - --------------------
+2025-04-19 01:23:15 -  Target: 'lay white by y five again'
+2025-04-19 01:23:15 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 01:23:15 - --------------------
+2025-04-19 01:23:15 - Epoch 49/50 Summary | Duration: 623.02s
+2025-04-19 01:23:15 -   Train Loss: -0.6576
+2025-04-19 01:23:15 -   Val Loss:   -0.6673
+2025-04-19 01:23:15 -   Val CER:    0.2282
+2025-04-19 01:23:15 - ----> Validation CER improved to 0.2282! Model saved to saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-19 01:33:38 - 
+--- Validation Examples ---
+2025-04-19 01:33:38 -  Target: 'bin white at d seven soon'
+2025-04-19 01:33:38 -  Pred:   'binwhiteatdsevensoon'
+2025-04-19 01:33:38 - --------------------
+2025-04-19 01:33:38 -  Target: 'place red at n six again'
+2025-04-19 01:33:38 -  Pred:   'placeredinnsixagain'
+2025-04-19 01:33:38 - --------------------
+2025-04-19 01:33:38 -  Target: 'place red by i eight soon'
+2025-04-19 01:33:38 -  Pred:   'placeredbyieightsoon'
+2025-04-19 01:33:38 - --------------------
+2025-04-19 01:33:38 -  Target: 'set blue at m eight please'
+2025-04-19 01:33:38 -  Pred:   'setblueatmeightplease'
+2025-04-19 01:33:38 - --------------------
+2025-04-19 01:33:38 -  Target: 'lay white by y five again'
+2025-04-19 01:33:38 -  Pred:   'laywhitebyyfiveagain'
+2025-04-19 01:33:38 - --------------------
+2025-04-19 01:33:38 - Epoch 50/50 Summary | Duration: 623.16s
+2025-04-19 01:33:38 -   Train Loss: -0.6651
+2025-04-19 01:33:38 -   Val Loss:   -0.6034
+2025-04-19 01:33:38 -   Val CER:    0.2299
+2025-04-19 01:33:38 - Validation CER did not improve. (1/10)
+2025-04-19 01:33:38 - 
+--- Training Finished ---
+2025-04-19 01:33:38 - Total Training Time: 9.09 hours (32723.48 seconds)
+2025-04-19 01:33:38 - Best Validation CER achieved: 0.2282
+2025-04-19 01:33:38 - Model corresponding to best validation CER saved at: saved_models/lipread_cnn_lstm_ctc_grid.pth
+2025-04-19 01:33:38 - 
+--- Evaluating on Test Set using Best Model ---
+2025-04-19 01:33:38 - Loaded best model weights from saved_models/lipread_cnn_lstm_ctc_grid.pth for final test evaluation.
+2025-04-19 01:34:00 - 
+--- Validation Examples ---
+2025-04-19 01:34:00 -  Target: 'bin red in d nine soon'
+2025-04-19 01:34:00 -  Pred:   'binredindninesoon'
+2025-04-19 01:34:00 - --------------------
+2025-04-19 01:34:00 -  Target: 'set white at s six again'
+2025-04-19 01:34:00 -  Pred:   'setwhiteatssixagain'
+2025-04-19 01:34:00 - --------------------
+2025-04-19 01:34:00 -  Target: 'set blue by g eight again'
+2025-04-19 01:34:00 -  Pred:   'setbluebygeightagain'
+2025-04-19 01:34:00 - --------------------
+2025-04-19 01:34:00 -  Target: 'place green by c five soon'
+2025-04-19 01:34:00 -  Pred:   'placegreenbycfivesoon'
+2025-04-19 01:34:00 - --------------------
+2025-04-19 01:34:00 -  Target: 'bin red with l four please'
+2025-04-19 01:34:00 -  Pred:   'binredwithlfourplease'
+2025-04-19 01:34:00 - --------------------
+2025-04-19 01:34:00 - ------------------------------
+2025-04-19 01:34:00 - Final Test Set Results:
+2025-04-19 01:34:00 -   Test Loss: -0.6684
+2025-04-19 01:34:00 -   Test CER:  0.2290
+2025-04-19 01:34:00 - ------------------------------
+2025-04-19 01:34:00 - --- Training Script Completed ---
