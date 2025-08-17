@@ -1,4 +1,4 @@
-# Real-Time Violence Detection with Spatio-Temporal AI
+# Real-Time Violence Detection using Spatio-Temporal Deep Learning
 
 <div align="center">
   <img src="demo.gif" alt="Project Demo" width="700"/>
@@ -9,9 +9,11 @@
 </p>
 
 <p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue.svg"/>
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.x-orange.svg"/>
-  <img alt="Dataset" src="https://img.shields.io/badge/Dataset-RWF--2000-brightgreen.svg"/>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python"/>
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.x-orange?style=for-the-badge&logo=pytorch"/>
+  <img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-4.x-green?style=for-the-badge&logo=opencv"/>
+  <img alt="Dataset" src="https://img.shields.io/badge/Dataset-RWF--2000-brightgreen?style=for-the-badge"/>
+  <img alt="CUDA" src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white"/>
   
 </p>
 
