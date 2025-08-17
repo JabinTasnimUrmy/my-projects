@@ -28,7 +28,7 @@
 *   [System Architecture & AI Pipeline](#-system-architecture--ai-pipeline)
 *   [Showcase: The Power of AI in Action](#-showcase-the-power-of-ai-in-action)
 *   [Future Scope](#-future-scope)
-*   [License](#-license)
+
 
 ---
 
@@ -90,8 +90,8 @@ repofinder-chatbot/
 ├── app.py                             # The main application file: runs the Flask web server
 ├── config.py                          # Loads secret API keys from the .env file
 ├── requirements.txt                   # Lists all Python libraries needed for the project
-├── .env                               # Your private file for secret API keys (do not share)
-└── README.md                          # Your project's documentation (for GitHub)
+├── .env                               # Private file for secret API keys (do not share)
+└── README.md                          # Project's documentation
 ```
 
 ---
@@ -144,7 +144,7 @@ In the root directory, create a file named .env and add your secret keys.
 </details>
 <br/>
 
-Add your copied keys to the .env file like this:
+Add your copied keys to the **.env** file like this:
 ```bash
 GITHUB_API_TOKEN="ghp_YourGitHubTokenHere"
 GROQ_API_KEY="gsk_YourGroqApiKeyHere"
