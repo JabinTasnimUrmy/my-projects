@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RepoFinder AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RepoFinder AI 🤖</h1>
+            <p>Describe your project idea, and I'll find a similar repository on GitHub.</p>
+        </header>
+        <main>
+            <textarea id="idea-input" placeholder="e.g., A tool to automatically organize my downloads folder based on file extension..."></textarea>
+            <button id="search-button">Analyze Idea</button>
+            <div id="loader" class="hidden"></div>
+            <div id="results-container"></div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
