@@ -216,6 +216,8 @@ Here, the model is given a complex, conceptual goal. It correctly translates "li
 
 ## Future Scope
 * Code-Level Similarity Search: Implement an additional analysis stage that clones the top repositories and uses Abstract Syntax Trees (ASTs) or code embedding models to find similarities in the actual source code.
+
 * Expanded Data Sources: Integrate with other developer platforms like Stack Overflow or dev.to to find not just code, but also relevant articles and discussions.
+
 * User Feedback Loop: Add a "Was this result helpful?" button to collect user feedback, which could be used to fine-tune a custom AI model in the future.
 Dockerization & Deployment: Containerize the entire application using Docker for easy, one-command deployment to cloud services like AWS or Render.
