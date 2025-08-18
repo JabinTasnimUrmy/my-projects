@@ -1,0 +1,20 @@
+# requirements.txt
+# This file lists all the Python packages required to run the RepoFinder AI project.
+# To install all dependencies, run: pip install -r requirements.txt
+
+# --- Core Web Framework ---
+Flask==3.0.3            # The micro web framework used to build the web server and API.
+Flask-Cors==4.0.1       # A Flask extension for handling Cross-Origin Resource Sharing (CORS), allowing the frontend to communicate with the backend.
+
+# --- AI & Machine Learning ---
+sentence-transformers==3.0.1 # The primary library for semantic search. Used to calculate the similarity between the user's idea and repository descriptions.
+torch==2.3.1                 # The core deep learning framework required by sentence-transformers to run the AI models.
+transformers==4.41.2         # A core dependency for sentence-transformers, from Hugging Face.
+groq==0.9.0                  # The official Python client library for the Groq API, used for the intelligent query generation stage.
+
+# --- API & Data Handling ---
+requests==2.32.3        # A standard library for making HTTP requests, used to communicate with the GitHub API.
+numpy==1.26.4           # A fundamental package for scientific computing, often a dependency for ML libraries like torch.
+
+# --- Utilities ---
+python-dotenv==1.0.1    # Reads the key-value pairs from the .env file and sets them as environment variables.
