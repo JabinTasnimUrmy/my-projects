@@ -133,6 +133,7 @@ In the root directory, create a file named .env and add your secret keys.
 8. Under "Select scopes", check the box for public_repo.
 9. Click "Generate token" and copy the key.
 </details>
+
 <details>
 <summary><strong>🔑 How to get your Groq API Key</strong></summary>
 
